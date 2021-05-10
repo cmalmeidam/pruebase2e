@@ -140,7 +140,7 @@
  <tr><td>6/05/2021</td><td>EP13</td><td>Administración Tags (F03)</td><td>Funcional</td><td>Positivo</td><td>Editar Tag </td><td>****Desc aqui</td></tr>
  <tr><td>6/05/2021</td><td>EP14</td><td>Administración Tags (F03)</td><td>Funcional</td><td>Positivo</td><td>Eliminar Tag</td><td>****Desc aqui</td></tr>
  <tr><td>6/05/2021</td><td>EP15</td><td>Administración Tags (F03)</td><td>Funcional</td><td>Negativo</td><td>Añadir un tag de prueba con texto y emojis</td><td>****Desc aqui</td></tr>
- <tr><td>6/05/2021</td><td>EP16</td><td>Administración Staff (F04)</td><td>Funcional</td><td>Negativo</td><td>Dejar vacio nombre y correo</td><td>****Desc aqui</td></tr>
+ <tr><td>6/05/2021</td><td>EP16</td><td>Administración Staff (F04)</td><td>Funcional</td><td>Negativo</td><td>Dejar vacio nombre y correo</td><td>El usuario accede a la pagina con usuario y contraseña a la pagina de staff, da click en el boton invite people en el costado superior izquierdo, sin llenar la informacion del correo procede a dar click en send invitation, Luego, verfica que esa invitacion no puede ser enviada porque el campo de correo esta vacio</td></tr>
  <tr><td>6/05/2021</td><td>EP17</td><td>Administración Staff (F04)</td><td>Funcional</td><td>Negativo</td><td>Validar un miembro nuevo con correo malformado del lado del cliente</td><td>****Desc aqui</td></tr>
  <tr><td>6/05/2021</td><td>EP18</td><td>Buscador sitio (F05)</td><td>Funcional</td><td>Positivo</td><td>Buscar un post en el sitio</td><td>****Desc aqui</td></tr>
  <tr><td>6/05/2021</td><td>EP19</td><td>Buscador sitio (F05)</td><td>Funcional</td><td>Positivo</td><td>Buscar un usuario en el sitio</td><td>****Desc aqui</td></tr>
