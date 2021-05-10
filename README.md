@@ -153,7 +153,7 @@
 * Debe tener instalado en la maquina Cypress, validar con el comando cypress --version si no lo tiene por favor instalarlo
 * Descargar o clonar el código del repositorio 
 * Abrir linea de comandos e ir a la carpeta en donde descargo o clono el repositorio
-* Ingresar a la carpeta Cypress
+* Ingresar a la carpeta /cypress
 * Ejecutar el comando cypress run --headless o si lo desea usar el comando cyppress open y ejecutar cada .spec.js de forma manual  
 
 
