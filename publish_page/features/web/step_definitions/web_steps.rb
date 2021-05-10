@@ -6,7 +6,7 @@ When(/^I click on element having xpath "([^\"]*)"$/) do |xpath|
   sleep 2
  end
 
-Given(/^I try to login/) do
+ Given(/^I try to login/) do
   begin
     @driver.find_element(:css, '.gh-btn').click
     @driver.find_element(:id, 'blog-title').send_keys('$name_1');

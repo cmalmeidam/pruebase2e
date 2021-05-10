@@ -2,7 +2,7 @@ Feature: Unpublish Page
 
   @user1 @web
   Scenario: As a user I want to unpublish a page
-    Given I navigate to page "http://localhost:2368/ghost/#/pages"
+    Given I navigate to page "http://ec2-13-58-252-44.us-east-2.compute.amazonaws.com:2368/ghost/#/pages"
     Given I try to login
     Then I wait for 3 seconds
     Then I click on element having css selector ".gh-btn.gh-btn-green.ember-view"
@@ -15,7 +15,7 @@ Feature: Unpublish Page
     Then I wait for 3 seconds  
     Then I click on element having css selector ".gh-btn.gh-btn-blue.gh-publishmenu-button"
     Then I wait for 3 seconds
-    Given I navigate to page "http://localhost:2368/ghost/#/pages"
+    Given I navigate to page "http://ec2-13-58-252-44.us-east-2.compute.amazonaws.com:2368/ghost/#/pages"
     Then I click on element having xpath "//h3[contains(.,'pruebasinpublicar')]"
     Then I wait for 3 seconds
     Then I click on element having css selector ".gh-btn.gh-btn-outline.gh-publishmenu-trigger"
@@ -23,7 +23,7 @@ Feature: Unpublish Page
     Then I click on element having css selector ".gh-publishmenu-radio-content"
     Then I wait for 3 seconds
     Then I click on element having css selector ".gh-btn.gh-btn-blue.gh-publishmenu-button" 
-    Given I navigate to page "http://localhost:2368/ghost/#/pages"
+    Given I navigate to page "http://ec2-13-58-252-44.us-east-2.compute.amazonaws.com:2368/ghost/#/pages"
     Then I click on element having xpath "//h3[contains(.,'pruebasinpublicar')]"
-    Then I navigate to page "localhost:2368/pruebasinpublicar"
+    Then I navigate to page "http://ec2-13-58-252-44.us-east-2.compute.amazonaws.com:2368/pruebasinpublicar"
     Then I should see text "Page not found"
