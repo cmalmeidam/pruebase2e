@@ -105,25 +105,6 @@
 <p><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335551550&quot;:6,&quot;335551620&quot;:6,&quot;335559740&quot;:259}">&nbsp;</span></p>
 </td>
 </tr>
-<tr>
-<td data-celllook="0">
-<p><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335551550&quot;:2,&quot;335551620&quot;:2,&quot;335559740&quot;:259}">&nbsp;</span></p>
-<p><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335551550&quot;:2,&quot;335551620&quot;:2,&quot;335559740&quot;:259}">&nbsp;</span></p>
-<p><span data-contrast="none">F0</span><span data-contrast="none">6</span><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335551550&quot;:2,&quot;335551620&quot;:2,&quot;335559740&quot;:259}">&nbsp;</span></p>
-</td>
-<td data-celllook="0">
-<p><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335551550&quot;:2,&quot;335551620&quot;:2,&quot;335559740&quot;:259}">&nbsp;</span></p>
-<p><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335551550&quot;:2,&quot;335551620&quot;:2,&quot;335559740&quot;:259}">&nbsp;</span></p>
-<p><span data-contrast="none">Login usuario</span><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335551550&quot;:2,&quot;335551620&quot;:2,&quot;335559740&quot;:259}">&nbsp;</span></p>
-<p><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335551550&quot;:2,&quot;335551620&quot;:2,&quot;335559740&quot;:259}">&nbsp;</span></p>
-</td>
-<td data-celllook="0">
-<p><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335551550&quot;:2,&quot;335551620&quot;:2,&quot;335559740&quot;:259}">&nbsp;</span></p>
-<p><span data-contrast="none">Permite crear un nuevo usuario con email y contraseña cuando no hay usuarios creados y en el caso de que existan usuarios, solicita ingresar con email y contraseña.</span><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335551550&quot;:6,&quot;335551620&quot;:6,&quot;335559740&quot;:259}">&nbsp;</span></p>
-<p><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335551550&quot;:6,&quot;335551620&quot;:6,&quot;335559740&quot;:259}">&nbsp;</span></p>
-</td>
-</tr>
-
 </tbody>
 </table>
 
