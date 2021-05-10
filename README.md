@@ -148,7 +148,7 @@
 </tbody></table>
 
 
-<h2> 3. Ejectar proyecto Cypress </h2>
+<h2> 3. Ejecutar proyecto Cypress </h2>
 
 * El aplicativo Ghost se encuentra desplegado en una instacia EC2 en AWS http://ec2-13-58-252-44.us-east-2.compute.amazonaws.com:2368/ por lo que no es necesario tenerlo instalado en la maquina local.
 * Debe tener instalado en la maquina Cypress, validar con el comando cypress --version si no lo tiene por favor instalarlo
