@@ -27,7 +27,7 @@
 </td>
 <td data-celllook="0">
 <p><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335551550&quot;:2,&quot;335551620&quot;:2,&quot;335559740&quot;:259}">&nbsp;</span></p>
-<p><span data-contrast="none">Permite administrar los posts en donde se pueden crear, ordenar, visualizar, actualizar y eliminar</span><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335551550&quot;:6,&quot;335551620&quot;:6,&quot;335559740&quot;:259}">&nbsp;</span></p>
+<p><span data-contrast="none">Permite la administración de los posts a los usuarios  ofreciendo las opciones de crear, editar, eliminar, publicar, anular publicación </span><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335551550&quot;:6,&quot;335551620&quot;:6,&quot;335559740&quot;:259}">&nbsp;</span></p>
 <p><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335551550&quot;:2,&quot;335551620&quot;:2,&quot;335559740&quot;:259}">&nbsp;</span></p>
 </td>
 </tr>
