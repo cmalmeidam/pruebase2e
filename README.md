@@ -1,6 +1,6 @@
 # Entrega semana 5
 
-<h2> Funcionalidades </h2>
+<h2> 1. Funcionalidades </h2>
 
 <table style="font-weight: 400;" data-tablestyle="MsoTableGrid" data-tablelook="1696">
 <tbody>
@@ -109,7 +109,7 @@
 </table>
 
 
-<h2> Escenarios de pruebas </h2>
+<h2> 2. Escenarios de pruebas </h2>
 
 
 <table class="tableizer-table">
@@ -146,6 +146,15 @@
  <tr><td>6/05/2021</td><td>EP20</td><td>Administración de Posts (F01)</td><td>Funcional</td><td>Negativo</td><td>Crear un nuevo post con emojis en el titulo</td></tr>
 </tbody></table>
 
+
+<h2> 3. Ejectar proyecto Cypress </h2>
+
+* El aplicativo Ghost se encuentra desplegado en una instacia EC2 en AWS http://ec2-13-58-252-44.us-east-2.compute.amazonaws.com:2368/ por lo que no es necesario tenerlo instalado en la maquina local.
+* Debe tener instalado en la maquina Cypress, validar con el comando cypress --version si no lo tiene por favor instalarlo
+* Descargar o clonar el código del repositorio 
+* Abrir linea de comandos e ir a la carpeta en donde descargo o clono el repositorio
+* Ingresar a la carpeta Cypress
+* Ejecutar el comando cypress run --headless o si lo desea usar el comando cyppress open y ejecutar cada .spec.js de forma manual  
 
 
 
