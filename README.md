@@ -152,7 +152,7 @@
 
 * El aplicativo Ghost se encuentra desplegado en una instacia EC2 en AWS http://ec2-13-58-252-44.us-east-2.compute.amazonaws.com:2368/ por lo que no es necesario tenerlo instalado en la maquina local.
 * Debe tener instalado en la maquina Cypress, validar con el comando cypress --version si no lo tiene por favor instalarlo
-* Descargar o clonar el código del repositorio 
+* Descargar o clonar el código del repositorio de la rama main
 * Abrir linea de comandos e ir a la carpeta en donde descargo o clono el repositorio
 * Ingresar a la carpeta /cypress
 * Ejecutar el comando cypress run --headless o si lo desea usar el comando cyppress open y ejecutar cada .spec.js de forma manual  
@@ -162,7 +162,7 @@
 * El aplicativo Ghost se encuentra desplegado en una instacia EC2 en AWS http://ec2-13-58-252-44.us-east-2.compute.amazonaws.com:2368/ por lo que no es necesario tenerlo instalado en la maquina local.
 * Debe tener instalado en la maquina kraken-moblile y sus dependencias, en el path de Kraken no debe haber nombres de archivos con "."
 * Ingresar al file donde tiene instalado kraken-mobile y sus dependencias.
-* Ubiquese en la raiz de la carpeta donde vive kraken-mobile y descargue o clone el código del repositorio.
+* Ubiquese en la raiz de la carpeta donde vive kraken-mobile y descargue o clone el código del repositorio de la rama main.
 * Abrir linea de comandos e ir a la carpeta en donde descargo o clono el repositorio
 * Ingresar a la carpeta /kraken con el comando cd kraken
 * Ingresar a una carpeta de un escenario con el comando cd <path>
