@@ -1,9 +1,9 @@
-describe("Anular publicación de un post", function () {
-  it("visits Ghosh", function () {
-    cy.visit("http://ec2-13-58-252-44.us-east-2.compute.amazonaws.com:2368/ghost/#/signin/"); 
+describe("Publish a page", function () {
+  it("visits Ghost", function () {
+    cy.visit("http://ec2-13-58-252-44.us-east-2.compute.amazonaws.com:2368/ghost/#/signin/");
     cy.wait(1000);
     loginGhost();
-    publicarPost();
+    publishPage();
   });
 });
 
@@ -25,9 +25,9 @@ function loginGhost() {
   cy.wait(1000);
 }
 
-function publicarPost() {
+function publishPage() {
   cy.wait(1000);
-  cy.get(".gh-nav-list-new.relative").click();
+  cy.get('.gh-nav-list.gh-nav-manage').contains('Pages').click();
   cy.get(".gh-content-status-draft.gh-badge.gh-badge-purple.nowrap").then(
     ($title) => {
       let draft = $title.length;
@@ -40,7 +40,19 @@ function publicarPost() {
       cy.get(".gh-btn.gh-btn-blue.gh-publishmenu-button.gh-btn-icon.ember-view")
         .contains("Publish")
         .click();
-      cy.get(".blue.link.fw4.flex.items-center.ember-view").click();  
+      cy.wait(1000);
+      cy.get(".gh-notification-content").contains("Published!").should("exist")
+      cy.get(".blue.link.fw4.flex.items-center.ember-view").click();
+      if (draft === 1) {
+        cy.get(".gh-content-status-draft.gh-badge.gh-badge-purple.nowrap").should("not.exist");
+      } else {
+        cy.get(".gh-content-status-draft.gh-badge.gh-badge-purple.nowrap").should(
+          "have.length",
+          draft - 1
+        );
+      }
+      cy.wait(1000);
+      cy.get(".gh-notification-content").contains("Published!").should("exist")
     }
   );
   cy.wait(1000);
