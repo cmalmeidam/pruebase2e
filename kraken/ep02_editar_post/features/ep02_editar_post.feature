@@ -1,5 +1,5 @@
 Feature: Editar Post
-  @user2 @web
+  @user1 @web
   Scenario: I want to edit a post
     Given I navigate to page "http://ec2-13-58-252-44.us-east-2.compute.amazonaws.com:2368/ghost/#/posts/"  
     Given I login
