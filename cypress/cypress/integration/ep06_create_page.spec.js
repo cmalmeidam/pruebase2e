@@ -4,6 +4,7 @@ describe("Create a page", function () {
     cy.wait(1000);
     loginGhost();
     createPage();
+    cy.wait(1000);
   });
 });
 
@@ -27,9 +28,8 @@ function createPage() {
   cy.get(".gh-btn.gh-btn-green.ember-view").contains('New page').click();
   cy.get(".gh-editor-title.ember-text-area.gh-input.ember-view")
     .type(namePage)
-    .type("{enter}");
-  cy.wait(1000);
-  cy.visit("http://ec2-13-58-252-44.us-east-2.compute.amazonaws.com:2368/ghost/#/pages");
+    .type("{enter}");  
+  cy.get(".blue.link.fw4.flex.items-center.ember-view").click();
   cy.get(".gh-content-entry-title").contains(namePage).should('exist');
   cy.wait(1000);
 }

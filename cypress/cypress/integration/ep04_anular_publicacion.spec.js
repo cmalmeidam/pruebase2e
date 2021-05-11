@@ -4,6 +4,7 @@ describe("Anular publicación de un post", function () {
     cy.wait(1000);
     loginGhost();
     anularPubPost();
+    cy.wait(1000);
   });
 });
 
@@ -28,7 +29,7 @@ function loginGhost() {
 function anularPubPost() {
   cy.wait(1000);
   cy.get(".gh-nav-list-new.relative").click();
-  cy.get(".flex.items-center.gh-content-status-published.nowrap")
+  cy.get(".gh-content-status-published.nowrap")
     .then(($title) => {
       let published = $title.length;
       console.log('published:',published);

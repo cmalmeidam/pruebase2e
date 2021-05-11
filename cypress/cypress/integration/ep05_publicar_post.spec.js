@@ -4,6 +4,7 @@ describe("Anular publicación de un post", function () {
     cy.wait(1000);
     loginGhost();
     publicarPost();
+    cy.wait(1000);
   });
 });
 

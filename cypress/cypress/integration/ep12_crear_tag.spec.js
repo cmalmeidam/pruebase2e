@@ -6,6 +6,7 @@ describe("Create a tag", () => {
     cy.wait(1000);
     loginGhost();
     createTag();
+    cy.wait(1000);
   });
 });
 

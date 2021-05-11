@@ -4,6 +4,7 @@ describe("Eliminar un post", function () {
     cy.wait(1000);
     loginGhost();
     eliminarPost();
+    cy.wait(1000);
   });
 });
 

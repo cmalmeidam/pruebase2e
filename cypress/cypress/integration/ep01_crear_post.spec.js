@@ -4,6 +4,7 @@ describe("Crear un post", function () {
     cy.wait(1000);
     loginGhost();
     crearPost();
+    cy.wait(1000);
   });
 });
 

@@ -6,6 +6,7 @@ describe("Editar un post", function () {
     cy.wait(1000);
     loginGhost();
     editarPost();
+    cy.wait(1000);
   });
 });
 

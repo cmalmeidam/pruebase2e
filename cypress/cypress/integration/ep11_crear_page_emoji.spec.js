@@ -5,6 +5,7 @@ describe('Create a page with emojis', () => {
         cy.wait(1000);
         loginGhost();
         createPageEmoji();
+        cy.wait(1000);
       });
   });
 
@@ -29,8 +30,7 @@ describe('Create a page with emojis', () => {
     cy.get(".gh-editor-title.ember-text-area.gh-input.ember-view")
       .type(namePage)
       .type("{enter}");
-    cy.wait(1000);
-    cy.visit("http://ec2-13-58-252-44.us-east-2.compute.amazonaws.com:2368/ghost/#/pages");
+    cy.get(".blue.link.fw4.flex.items-center.ember-view").click();
     cy.get(".gh-content-entry-title").contains(namePage).should('exist');
     cy.wait(1000);
   }

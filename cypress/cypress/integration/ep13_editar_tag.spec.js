@@ -6,6 +6,7 @@ describe("Edit a tag", () => {
     cy.wait(1000);
     loginGhost();
     editTag();
+    cy.wait(1000);
   });
 });
 
