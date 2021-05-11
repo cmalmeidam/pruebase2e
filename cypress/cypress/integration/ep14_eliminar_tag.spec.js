@@ -19,20 +19,18 @@ function loginGhost() {
     ".login.gh-btn.gh-btn-blue.gh-btn-block.gh-btn-icon.ember-view"
   ).click();
   cy.wait(1000);
-  cy.visit('http://ec2-13-58-252-44.us-east-2.compute.amazonaws.com:2368/ghost/#/tags');
 }
 
 function deleteTag() {
+  cy.visit('http://ec2-13-58-252-44.us-east-2.compute.amazonaws.com:2368/ghost/#/tags');
   cy.get("ol>li.gh-list-row.gh-tags-list-item.ember-view").eq(0).click();
   cy.url().should(
     "eq",
     "http://ec2-13-58-252-44.us-east-2.compute.amazonaws.com:2368/ghost/#/tags/nombre-tag"
   );
-  cy.get("button.gh-btn.gh-btn-red.gh-btn-icon.mb15")
-    .contains(/^Delete tag$/)
+  cy.get("button.gh-btn.gh-btn-red.gh-btn-icon.mb15").click({ force: true });
+  cy.get("button.gh-btn.gh-btn-red.gh-btn-icon.ember-view")
+    .contains('Delete')
     .click({ force: true });
-  cy.get("button.gh-btn.gh-btn-red.gh-btn-icon.mb15")
-    .contains(/^"Delete\\"$/)
-    .click({ force: true });
-  // cy.get('div.no-posts').should('exist')
+  cy.get('div.no-posts').should('exist')
 }
