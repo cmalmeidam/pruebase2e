@@ -19,13 +19,13 @@ if ENV["ADB_DEVICE_ARG"].nil?
       @driver.find_element(:css, '.gh-btn').click
       @driver.find_element(:id, 'blog-title').send_keys('Hola');
       @driver.find_element(:id, 'name').send_keys('Daniel');
-      @driver.find_element(:id, 'email').send_keys('user@test.com');
+      @driver.find_element(:id, 'email').send_keys('tutoresmisoca@gmail.com');
       @driver.find_element(:id, 'name').send_keys(' Velasquez');
-      @driver.find_element(:id, 'password').send_keys('Uniandes*21');
+      @driver.find_element(:id, 'password').send_keys('FIm$zAHoj%');
       @driver.find_element(:css, '.gh-btn').click
     rescue
-      @driver.find_element(:id, 'ember8').send_keys('user@test.com')
-      @driver.find_element(:id, 'ember10').send_keys('Uniandes*21')
+      @driver.find_element(:id, 'ember8').send_keys('tutoresmisoca@gmail.com')
+      @driver.find_element(:id, 'ember10').send_keys('FIm$zAHoj%')
       @driver.find_element(:id, 'ember12').click
     end
   end
