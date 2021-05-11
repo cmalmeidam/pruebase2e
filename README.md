@@ -166,6 +166,7 @@
 * Abrir linea de comandos e ir a la carpeta en donde descargo o clono el repositorio
 * Ingresar a la carpeta /kraken con el comando cd kraken
 * Ingresar a una carpeta de un escenario con el comando cd <path>
+* Ejecutar el comando gem install byebug
 * Ejecutar el comando bundle exec kraken-mobile run
 * Esperar que termine la ejecución del escenario.
 * En consola escribir el comando cd ..
