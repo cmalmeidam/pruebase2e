@@ -2,7 +2,7 @@ Feature: Publish Page
 
   @user1 @web
   Scenario: As a user I want to publish a page
-    Given I navigate to page "http://ec2-13-58-252-44.us-east-2.compute.amazonaws.com:2368/ghost/#/pages"
+    Given I navigate to page "http://ec2-3-16-149-96.us-east-2.compute.amazonaws.com:2368/ghost/#/pages"
     Given I try to login
     Then I wait for 3 seconds
     Then I click on element having css selector ".gh-btn.gh-btn-green.ember-view"
@@ -17,6 +17,6 @@ Feature: Publish Page
     Then I wait for 3 seconds
     Then I click on element having css selector ".gh-notification-content"
     Then I wait for 3 seconds
-    Then I navigate to page "http://ec2-13-58-252-44.us-east-2.compute.amazonaws.com:2368/$$name_1"
+    Then I navigate to page "http://ec2-3-16-149-96.us-east-2.compute.amazonaws.com:2368/$$name_1"
 
 

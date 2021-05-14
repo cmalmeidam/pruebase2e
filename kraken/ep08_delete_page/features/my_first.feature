@@ -2,9 +2,9 @@ Feature: Delete Page
 
   @user1 @web
   Scenario: As a user I want to delete a page
-    Given I navigate to page "http://ec2-13-58-252-44.us-east-2.compute.amazonaws.com:2368/ghost/#/signin/"
+    Given I navigate to page "http://ec2-3-16-149-96.us-east-2.compute.amazonaws.com:2368/ghost/#/signin/"
     Given I try to login
-    Given I navigate to page "http://ec2-13-58-252-44.us-east-2.compute.amazonaws.com:2368/ghost/#/pages"
+    Given I navigate to page "http://ec2-3-16-149-96.us-east-2.compute.amazonaws.com:2368/ghost/#/pages"
     Then I click on element having css selector ".gh-btn.gh-btn-green.ember-view"
     Then I wait for 3 seconds
     Then I enter "pruebatituloeliminar" into input field having css selector ".gh-editor-title.ember-text-area.gh-input.ember-view"
@@ -15,7 +15,7 @@ Feature: Delete Page
     Then I wait for 3 seconds  
     Then I click on element having css selector ".gh-btn.gh-btn-blue.gh-publishmenu-button"
     Then I wait for 3 seconds
-    Given I navigate to page "http://ec2-13-58-252-44.us-east-2.compute.amazonaws.com:2368/ghost/#/pages"
+    Given I navigate to page "http://ec2-3-16-149-96.us-east-2.compute.amazonaws.com:2368/ghost/#/pages"
     Then I wait for 3 seconds
     Then I click on element having xpath "//h3[contains(.,'pruebatituloeliminar')]"
     Then I wait for 3 seconds
@@ -25,5 +25,5 @@ Feature: Delete Page
     Then I wait for 3 seconds
     Then I click on element having css selector ".gh-btn-red"
     Then I wait for 3 seconds  
-    Then I navigate to page "http://ec2-13-58-252-44.us-east-2.compute.amazonaws.com:2368/pruebatituloeliminar"
+    Then I navigate to page "http://ec2-3-16-149-96.us-east-2.compute.amazonaws.com:2368/pruebatituloeliminar"
     Then I should see text "Page not found"

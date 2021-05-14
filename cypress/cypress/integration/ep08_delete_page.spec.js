@@ -1,6 +1,6 @@
 describe("Delete a page", function () {
   it("visits Ghost", function () {
-    cy.visit("http://ec2-13-58-252-44.us-east-2.compute.amazonaws.com:2368/ghost/#/signin/");
+    cy.visit("http://ec2-3-16-149-96.us-east-2.compute.amazonaws.com:2368/ghost/#/signin/");
     cy.wait(1000);
     loginGhost();
     deletePage();
@@ -43,7 +43,7 @@ function deletePage() {
       cy.get(".gh-btn.gh-btn-red.gh-btn-icon.ember-view")
         .contains("Delete")
         .click();
-      cy.visit("http://ec2-13-58-252-44.us-east-2.compute.amazonaws.com:2368/ghost/#/pages");
+      cy.visit("http://ec2-3-16-149-96.us-east-2.compute.amazonaws.com:2368/ghost/#/pages");
       cy.get(".gh-content-entry-title").contains(val).should('not.exist');
     });
   cy.wait(1000); 

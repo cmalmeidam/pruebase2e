@@ -1,6 +1,6 @@
-describe("Crear un post", function () {
+describe("Crear un post con emoji", function () {
     it("visits Ghosh", function () {  
-      cy.visit("http://ec2-13-58-252-44.us-east-2.compute.amazonaws.com:2368/ghost/#/signin/"); 
+      cy.visit("http://ec2-3-16-149-96.us-east-2.compute.amazonaws.com:2368/ghost/#/signin/"); 
       cy.wait(1000);
       loginGhost();
       crearPost();
@@ -20,15 +20,19 @@ describe("Crear un post", function () {
   }
   
   function crearPost() {
-    const nombrePost =
-      "Post con emoji" + "😀";
+    let nombrePost =
+    "CrearPost" + Math.floor(Math.random() * (100 - (1 - 1))) + 1;
+    let nombrePost1=nombrePost+"😀";
+  cy.wait(1000);
+  cy.get(".gh-secondary-action.gh-nav-new-post.ember-view").click();
+  cy.get(".gh-editor-title.ember-text-area.gh-input.ember-view")
+    .type(nombrePost1)
+    .type("{enter}"); 
+    cy.wait(1000); 
+    cy.visit("http://ec2-3-16-149-96.us-east-2.compute.amazonaws.com:2368/ghost/");
     cy.wait(1000);
-    cy.get(".gh-secondary-action.gh-nav-new-post.ember-view").click();
-    cy.get(".gh-editor-title.ember-text-area.gh-input.ember-view")
-      .type(nombrePost);  
-    cy.get(".koenig-editor__editor.__mobiledoc-editor")
-      .type(nombrePost)      
-    cy.get(".blue.link.fw4.flex.items-center.ember-view").click();
-    cy.get(".gh-content-entry-title").contains(nombrePost).should('exist');
+    cy.get('.gh-nav-list.gh-nav-manage').contains('Posts').click();
     cy.wait(1000);
+    cy.get(".gh-content-entry-title").contains(nombrePost1).should("exist");
+  cy.wait(1000);
   }

@@ -1,7 +1,7 @@
 describe("Editar un post", function () {
   it("visits Ghosh", function () {
     cy.visit(
-      "http://ec2-13-58-252-44.us-east-2.compute.amazonaws.com:2368/ghost/#/signin/"
+      "http://ec2-3-16-149-96.us-east-2.compute.amazonaws.com:2368/ghost/#/signin/"
     );
     cy.wait(1000);
     loginGhost();
@@ -30,22 +30,33 @@ function loginGhost() {
 
 function editarPost() {
   const nombrePost =
-    "EditarPost" + Math.floor(Math.random() * (100 - (1 - 1))) + 1;
+  "CrearPost" + Math.floor(Math.random() * (100 - (1 - 1))) + 1;
+  const editarPost =
+  "EditarPost" + Math.floor(Math.random() * (100 - (1 - 1))) + 1;
+cy.wait(1000);
+cy.get(".gh-secondary-action.gh-nav-new-post.ember-view").click();
+cy.get(".gh-editor-title.ember-text-area.gh-input.ember-view")
+  .type(nombrePost)
+  .type("{enter}"); 
+  cy.wait(1000); 
+  cy.visit("http://ec2-3-16-149-96.us-east-2.compute.amazonaws.com:2368/ghost/");
   cy.wait(1000);
-  cy.get(".gh-nav-list-new.relative").click();
-  cy.get(".gh-content-entry-title").then(($title) => {
-    let title = $title.get(getRandomInt(0, $title.length));
-    cy.wrap(title).click({ force: true });
-  });
+  cy.get('.gh-nav-list.gh-nav-manage').contains('Posts').click();
+  cy.wait(1000);
+  cy.get(".gh-content-entry-title").contains(nombrePost).click({force:true});
+cy.wait(1000);
   cy.get(".gh-editor-title.ember-text-area.gh-input.ember-view")
     .invoke("val")
     .then((val) => {
       cy.get(".gh-editor-title.ember-text-area.gh-input.ember-view")
-        .clear()
-        .type(nombrePost);
-      cy.get(".koenig-editor__editor.__mobiledoc-editor").type(nombrePost);
-      cy.get(".blue.link.fw4.flex.items-center.ember-view").click();
-      cy.get(".gh-content-entry-title").contains(nombrePost).should("exist");
+        .type(editarPost)
+        .type("{enter}");
+  cy.wait(1000);
+  cy.visit("http://ec2-3-16-149-96.us-east-2.compute.amazonaws.com:2368/ghost/");
+  cy.wait(1000);
+  cy.get('.gh-nav-list.gh-nav-manage').contains('Posts').click();
+  cy.wait(1000);
+  cy.get(".gh-content-entry-title").contains(editarPost).should("exist");
     });
   cy.wait(1000);
 }

@@ -1,6 +1,6 @@
 describe("Eliminar un post", function () {
   it("visits Ghosh", function () {    
-    cy.visit("http://ec2-13-58-252-44.us-east-2.compute.amazonaws.com:2368/ghost/#/signin/"); 
+    cy.visit("http://ec2-3-16-149-96.us-east-2.compute.amazonaws.com:2368/ghost/#/signin/"); 
     cy.wait(1000);
     loginGhost();
     eliminarPost();
@@ -43,6 +43,8 @@ function eliminarPost() {
       cy.get(".gh-btn.gh-btn-red.gh-btn-icon.ember-view")
         .contains("Delete")
         .click();
+      cy.wait(1000); 
+      cy.visit("http://ec2-3-16-149-96.us-east-2.compute.amazonaws.com:2368/ghost/#/posts/");
       cy.get(".gh-content-entry-title").contains(val).should('not.exist');
     });
   cy.wait(1000); 

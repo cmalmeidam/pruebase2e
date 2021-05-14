@@ -1,6 +1,6 @@
 describe("Edit a page", function () {
   it("visits Ghost", function () {
-    cy.visit("http://ec2-13-58-252-44.us-east-2.compute.amazonaws.com:2368/ghost/#/signin/");
+    cy.visit("http://ec2-3-16-149-96.us-east-2.compute.amazonaws.com:2368/ghost/#/signin/");
     cy.wait(1000);
     loginGhost();
     editPage();
@@ -27,23 +27,26 @@ function loginGhost() {
 
 
 function editPage() {
-  const namePage =
+  const createPage1 =
+    "CreatePage" + Math.floor(Math.random() * (100 - (1 - 1))) + 1;
+  const editPage2 =
     "EditPage" + Math.floor(Math.random() * (100 - (1 - 1))) + 1;
   cy.wait(1000);
   cy.get('.gh-nav-list.gh-nav-manage').contains('Pages').click();
-  cy.get(".gh-content-entry-title").then(($title) => {
-    let title = $title.get(getRandomInt(0, $title.length));
-    cy.wrap(title).click({ force: true });
-  });
+  cy.wait(1000);
+  cy.get('a[href*="page"]').contains('New page').click();
+  cy.wait(1000);
   cy.get(".gh-editor-title.ember-text-area.gh-input.ember-view")
-    .invoke("val")
-    .then((val) => {
-      cy.get(".gh-editor-title.ember-text-area.gh-input.ember-view")
-        .clear()
-        .type(namePage)
-        .type("{enter}");
-      cy.get(".blue.link.fw4.flex.items-center.ember-view").click();
-      cy.get(".gh-content-entry-title").contains(namePage).should("exist");
-    });
+    .type(createPage1)
+    .type("{enter}");  
+  cy.wait(1000);
+  cy.visit("http://ec2-3-16-149-96.us-east-2.compute.amazonaws.com:2368/ghost/#/pages/");
+  cy.get(".gh-content-entry-title").contains(createPage1).click();
+  cy.get(".gh-editor-title.ember-text-area.gh-input.ember-view")
+    .clear()
+    .type(editPage2)
+    .type("{enter}");
+  cy.get(".blue.link.fw4.flex.items-center.ember-view").click();
+  cy.get(".gh-content-entry-title").contains(editPage2).should("exist");
   cy.wait(1000);
 }
