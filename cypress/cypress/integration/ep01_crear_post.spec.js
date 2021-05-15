@@ -59,7 +59,7 @@ function crearPost(path, url) {
   cy.wait(1000);
   cy.get(".gh-secondary-action.gh-nav-new-post.ember-view").click() .then(() => {
     cy.wait(1500);
-    cy.screenshot(path + "Paso5");
+    cy.screenshot(path + "Paso4");
   });;
   cy.get(".gh-editor-title.ember-text-area.gh-input.ember-view")
     .type(nombrePost)
