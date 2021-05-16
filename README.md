@@ -1,4 +1,4 @@
-# Entrega semana 5
+# Entrega semana 6
 
 <h2> 1. Funcionalidades </h2>
 
