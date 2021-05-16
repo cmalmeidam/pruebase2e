@@ -150,21 +150,22 @@
 
 <h2> 3. Ejecutar proyecto Cypress </h2>
 
-* El aplicativo Ghost se encuentra desplegado en una instacia EC2 en AWS http://ec2-13-58-252-44.us-east-2.compute.amazonaws.com:2368/ por lo que no es necesario tenerlo instalado en la maquina local.
-* Debe tener instalado en la maquina Cypress, validar con el comando cypress --version si no lo tiene por favor instalarlo
-* Descargar o clonar el código del repositorio de la rama main
+* El aplicativo Ghost se encuentra desplegado en dos instacia EC2 en AWS para la versión 3.3.0 es http://ec2-3-16-149-96.us-east-2.compute.amazonaws.com:2368/ ya para la versión 3.42.5 es http://ec2-3-15-143-31.us-east-2.compute.amazonaws.com:2368 por lo que no es necesario tenerlo instalado en la maquina local.
+* Debe tener instalado en la maquina Cypress versión 7.3.0, validar con el comando cypress --version si no lo tiene por favor instalarla
+* Descargar o clonar el código del repositorio de la rama semana6
 * Abrir linea de comandos e ir a la carpeta en donde descargo o clono el repositorio
 * Ingresar a la carpeta /cypress
 * Ejecutar el comando cypress run --headless o si lo desea usar el comando cyppress open y ejecutar cada .spec.js de forma manual  
 
 <h2> 4. Ejecutar proyecto Kraken </h2>
 
-* El aplicativo Ghost se encuentra desplegado en una instacia EC2 en AWS http://ec2-13-58-252-44.us-east-2.compute.amazonaws.com:2368/ por lo que no es necesario tenerlo instalado en la maquina local.
+*El aplicativo Ghost se encuentra desplegado en dos instacia EC2 en AWS para la versión 3.3.0 es http://ec2-3-16-149-96.us-east-2.compute.amazonaws.com:2368/ ya para la versión 3.42.5 es http://ec2-3-15-143-31.us-east-2.compute.amazonaws.com:2368 por lo que no es necesario tenerlo instalado en la maquina local.
 * Debe tener instalado en la maquina kraken-moblile y sus dependencias, en el path de Kraken no debe haber nombres de archivos con "."
 * Ingresar al file donde tiene instalado kraken-mobile y sus dependencias.
 * Ubiquese en la raiz de la carpeta donde vive kraken-mobile y descargue o clone el código del repositorio de la rama main.
 * Abrir linea de comandos e ir a la carpeta en donde descargo o clono el repositorio
 * Ingresar a la carpeta /kraken con el comando cd kraken
+* Ingresar a la carpeta de la versión de Ghost que desea probar (3.3.0 ó 3.42.5) con el comando cd 
 * Ingresar a una carpeta de un escenario con el comando cd <path>
 * Ejecutar el comando gem install byebug
 * Ejecutar el comando bundle exec kraken-mobile run
@@ -172,6 +173,20 @@
 * En consola escribir el comando cd ..
 * Ingresar al siguiente escenario cd <path>
 * Repetir el proceso con todos los demás escenarios.
+
+<h2> 3. Ejecutar proyecto Resemble </h2>
+* Debe haber terminado la ejecución de todos los escenarios de cypress luego ejecutar el comando  cypress run --headless 
+* Ingresar a la carpeta /resemble de la raiz del repo
+* Ejecutar el comando npm install para descargar las dependencias del proyecto
+* Ejecutar el comando node index.js
+* Los resultados de la ejecución se veran en las carpetas /cypress/cypress/screenshots/<escenario>/resultado dentro de esta carpeta se genera las imagenes de las diferencias y los html del reporte.
+
+<h2> 3. Ejecutar proyecto Backstop </h2>
+* Debe haber terminado la ejecución de todos los escenarios de cypress luego ejecutar el comando  cypress run --headless 
+* Ingresar a la carpeta raiz del repo
+* Debe tener instalado backstopjs en la versión v5.3.2 en el equipo de ejecución, comprobar la instalación con el comando backstop -v sino lo tiene npm install -g backstopjs
+* Ejecutar el comando node scriptbackstop.js
+* Los resultados de la ejecución se veran en las carpetas /backstop_data/html_report/ dentro de esta carpeta se genera el html del reporte.
 
 
 
