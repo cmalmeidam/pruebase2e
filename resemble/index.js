@@ -3,7 +3,7 @@ const config = require("./config.json");
 const fs = require("fs");
 const { resolve } = require("path");
 
-const FOLDER_PRINCIPAL = "./screenshots/";
+const FOLDER_PRINCIPAL = "../cypress/cypress/screenshots/";
 const FOLDER_RESULT = "/resultado/";
 const FOLDER_VERSION_3_3_0 = "/version_3_3_0/";
 const FOLDER_VERSION_3_42_5 = "/version_3_42_5/";
@@ -14,17 +14,11 @@ let informesDet = [];
 const { viewportHeight, viewportWidth, browsers, options } = config;
 
 async function executeTest() { 
-  try {
-    console.log("Caller");
-    await generaReporte();
-    console.log("this.informesDet:", JSON.stringify(informesDet));
-
-
-    console.log("After waiting");
+  try {    
+    await generaReporte();  
   } catch (error) {
     console.log("error_executeTest:", error);
-    } finally {
-    
+    } finally {    
     console.log(
       "Execution finished. Check the report under the results folder"
     );
@@ -32,27 +26,10 @@ async function executeTest() {
   return true;
 }
 
-/*function generaIndex() {
-  return new Promise((resolve, reject) => {    
-    console.log("Dentro promesa");
-    fs.readdir(FOLDER_PRINCIPAL, async (err, files) => {
-
-
-      
-    }
-    );
-
-    resolve("OK");
-    reject(`Error generaReporte`);
-  });
-}*/
-
-
 function generaReporte() {
   return new Promise((resolve, reject) => {   
     let resp = []; 
-    console.log("Dentro promesa");
-    
+        
     fs.readdir(FOLDER_PRINCIPAL, async (err, files) => {
       files.forEach(async (file) => {
         fs.readdir(
