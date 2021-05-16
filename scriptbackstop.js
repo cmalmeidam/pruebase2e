@@ -9,16 +9,11 @@ const COMD_APPROVE = "backstop approve"
 
 async function ejecucion() {
   await rename(ARCHIVO_3_3_0, ARCHIVO_EJECUCION);
-  await ejecutarCmds(COMD_TEST);
-  console.log("kugiua");
-  await ejecutarCmds(COMD_APPROVE);
-  console.log("kugiua");
-  await rename(ARCHIVO_EJECUCION, ARCHIVO_3_3_0);
-  console.log("kugiua");
+  await ejecutarCmds(COMD_TEST);  
+  await ejecutarCmds(COMD_APPROVE); 
+  await rename(ARCHIVO_EJECUCION, ARCHIVO_3_3_0); 
   await rename(ARCHIVO_3_42_5, ARCHIVO_EJECUCION);
-  console.log("kugiua");
-  await ejecutarCmds(COMD_TEST);
-  console.log("kugiua");
+  await ejecutarCmds(COMD_TEST);  
   await rename(ARCHIVO_EJECUCION,ARCHIVO_3_42_5);
 }
 
