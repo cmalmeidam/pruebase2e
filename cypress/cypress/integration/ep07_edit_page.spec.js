@@ -1,52 +1,70 @@
-describe("Edit a page", function () {
-  it("visits Ghost", function () {
-    cy.visit("http://ec2-3-16-149-96.us-east-2.compute.amazonaws.com:2368/ghost/#/signin/");
+import * as transversales from "./function_tx";
+
+describe("Editar una pagina version 3.3.0", function () {
+  it("Editar una pagina Ghost", function () {
+    transversales.visitApp(transversales.URL_VERSION_3_3_0, transversales.PATH_VERSION_3_3_0);
     cy.wait(1000);
-    loginGhost();
-    editPage();
+    transversales.loginGhost(transversales.PATH_VERSION_3_3_0, transversales.USER_GHOST, transversales.PASS_GHOST);
+    cy.wait(1000);
+    editPage(transversales.PATH_VERSION_3_3_0, transversales.URL_VERSION_3_3_0);
+    cy.wait(1000);
   });
 });
 
-function getRandomInt(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min)) + min;
-}
+describe("Editar una pagina version 3.42.5", function () {
+  it("Editar una pagina Ghost", function () {
+    transversales.visitApp(transversales.URL_VERSION_3_42_5, transversales.PATH_VERSION_3_42_5);
+    cy.wait(1000);
+    transversales.loginGhost(transversales.PATH_VERSION_3_42_5, transversales.USER_GHOST, transversales.PASS_GHOST);
+    cy.wait(1000);
+    editPage(transversales.PATH_VERSION_3_42_5, transversales.URL_VERSION_3_42_5);
+    cy.wait(1000);
+  });
+});
 
-function loginGhost() {
-  cy.wait(1000);
-  cy.get(".email.ember-text-field.gh-input.ember-view").type(
-    "tutoresmisoca@gmail.com"
-  );
-  cy.get(".password.ember-text-field.gh-input.ember-view").type("FIm$zAHoj%");
-  cy.get(
-    ".login.gh-btn.gh-btn-blue.gh-btn-block.gh-btn-icon.ember-view"
-  ).click();
-  cy.wait(1000);
-}
-
-
-function editPage() {
+function editPage(path, url) {
   const createPage1 =
     "CreatePage" + Math.floor(Math.random() * (100 - (1 - 1))) + 1;
   const editPage2 =
     "EditPage" + Math.floor(Math.random() * (100 - (1 - 1))) + 1;
   cy.wait(1000);
-  cy.get('.gh-nav-list.gh-nav-manage').contains('Pages').click();
-  cy.wait(1000);
-  cy.get('a[href*="page"]').contains('New page').click();
-  cy.wait(1000);
+  cy.get('.gh-nav-list.gh-nav-manage').contains('Pages').click()
+  .then(() => {
+    cy.wait(1500);
+    cy.screenshot(path + "Paso1");
+  });
+  cy.get('a[href*="page"]').contains('New page').click()    
+  .then(() => {
+    cy.wait(1500);
+    cy.screenshot(path + "Paso2");
+  });
   cy.get(".gh-editor-title.ember-text-area.gh-input.ember-view")
     .type(createPage1)
-    .type("{enter}");  
+    .type("{enter}")
+    .then(() => {
+      cy.wait(1500);
+      cy.screenshot(path + "Paso3");
+    });  
   cy.wait(1000);
-  cy.visit("http://ec2-3-16-149-96.us-east-2.compute.amazonaws.com:2368/ghost/#/pages/");
-  cy.get(".gh-content-entry-title").contains(createPage1).click();
+  cy.visit(url+"pages/");
+  cy.get(".gh-content-entry-title").contains(createPage1).click({force:true})
+  .then(() => {
+    cy.wait(1500);
+    cy.screenshot(path + "Paso4");
+  });
   cy.get(".gh-editor-title.ember-text-area.gh-input.ember-view")
     .clear()
     .type(editPage2)
-    .type("{enter}");
+    .type("{enter}")
+    .then(() => {
+      cy.wait(1500);
+      cy.screenshot(path + "Paso5");
+    });
   cy.get(".blue.link.fw4.flex.items-center.ember-view").click();
-  cy.get(".gh-content-entry-title").contains(editPage2).should("exist");
+  cy.get(".gh-content-entry-title").contains(editPage2).should("exist")
+  .then(() => {
+    cy.wait(1500);
+    cy.screenshot(path + "Paso6");
+  });
   cy.wait(1000);
 }
