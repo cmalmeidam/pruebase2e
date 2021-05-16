@@ -151,7 +151,7 @@
 <h2> 3. Ejecutar proyecto Cypress </h2>
 
 * El aplicativo Ghost se encuentra desplegado en dos instacia EC2 en AWS para la versión 3.3.0 es http://ec2-3-16-149-96.us-east-2.compute.amazonaws.com:2368/ ya para la versión 3.42.5 es http://ec2-3-15-143-31.us-east-2.compute.amazonaws.com:2368 por lo que no es necesario tenerlo instalado en la maquina local.
-* Debe tener instalado en la maquina Cypress versión 7.3.0, validar con el comando cypress --version si no lo tiene por favor instalarla
+* Debe tener instalado en la maquina cypress versión 7.3.0, validar con el comando cypress --version si no lo tiene o tiene otra versión por favor instalarla ejecutando los comandos npm uninstall -g cypress y luego el comando npm install -g cypress
 * Descargar o clonar el código del repositorio de la rama semana6
 * Abrir linea de comandos e ir a la carpeta en donde descargo o clono el repositorio
 * Ingresar a la carpeta /cypress
@@ -175,14 +175,16 @@
 * Repetir el proceso con todos los demás escenarios.
 
 <h2> 3. Ejecutar proyecto Resemble </h2>
-* Debe haber terminado la ejecución de todos los escenarios de cypress luego ejecutar el comando  cypress run --headless 
+
+* Debe haber terminado la ejecución de todos los escenarios de cypress. 
 * Ingresar a la carpeta /resemble de la raiz del repo
 * Ejecutar el comando npm install para descargar las dependencias del proyecto
 * Ejecutar el comando node index.js
-* Los resultados de la ejecución se veran en las carpetas /cypress/cypress/screenshots/<escenario>/resultado dentro de esta carpeta se genera las imagenes de las diferencias y los html del reporte.
+* Los resultados de la ejecución se veran en las carpetas /cypress/cypress/screenshots/(escenario)/resultado dentro de esta carpeta se genera las imagenes de las diferencias y los html del reporte.
 
 <h2> 3. Ejecutar proyecto Backstop </h2>
-* Debe haber terminado la ejecución de todos los escenarios de cypress luego ejecutar el comando  cypress run --headless 
+
+* Debe haber terminado la ejecución de todos los escenarios de cypress. 
 * Ingresar a la carpeta raiz del repo
 * Debe tener instalado backstopjs en la versión v5.3.2 en el equipo de ejecución, comprobar la instalación con el comando backstop -v sino lo tiene npm install -g backstopjs
 * Ejecutar el comando node scriptbackstop.js
