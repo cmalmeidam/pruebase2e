@@ -174,7 +174,7 @@
 * Ingresar al siguiente escenario cd <path>
 * Repetir el proceso con todos los demás escenarios.
 
-<h2> 3. Ejecutar proyecto Resemble </h2>
+<h2> 5. Ejecutar proyecto Resemble </h2>
 
 * Debe haber terminado la ejecución de todos los escenarios de cypress. 
 * Ingresar a la carpeta /resemble de la raiz del repo
@@ -182,13 +182,17 @@
 * Ejecutar el comando node index.js
 * Los resultados de la ejecución se veran en las carpetas /cypress/cypress/screenshots/(escenario)/resultado dentro de esta carpeta se genera las imagenes de las diferencias y los html del reporte.
 
-<h2> 3. Ejecutar proyecto Backstop </h2>
+<h2> 6. Ejecutar proyecto Backstop </h2>
 
 * Debe haber terminado la ejecución de todos los escenarios de cypress. 
 * Ingresar a la carpeta raiz del repo
 * Debe tener instalado backstopjs en la versión v5.3.2 en el equipo de ejecución, comprobar la instalación con el comando backstop -v sino lo tiene npm install -g backstopjs
 * Ejecutar el comando node scriptbackstop.js
 * Los resultados de la ejecución se veran en las carpetas /backstop_data/html_report/ dentro de esta carpeta se genera el html del reporte.
+
+<h2> 6. Generación del reporte unificado </h2>
+
+
 
 
 
