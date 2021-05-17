@@ -192,7 +192,11 @@
 
 <h2> 6. Generación del reporte unificado </h2>
 
-
+* Previamente debe haber terminado la ejecucion correcta de los pasos anteriores
+* Ingresar a la carpeta raiz del repo
+* Ejecutar el comando ```node generarReporte.js ```
+* Esto generara un archivo en la carpeta raiz llamado reporteConsolidado.html
+* Abra en su navegador el reporte y podra visualizar el listado consolidado de los reportes Resemble y Backstop
 
 
 
